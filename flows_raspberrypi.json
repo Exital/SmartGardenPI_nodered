@@ -21,13 +21,6 @@
         "info": ""
     },
     {
-        "id": "99fe0028.b124d",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "2520a5c9.3a695a",
         "type": "ui_group",
         "name": "Board 1",
@@ -352,6 +345,37 @@
         "type": "ui_group",
         "name": "Calibration",
         "tab": "dff3eb6e.9ab698",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b72a8d9.124d97",
+        "type": "ui_tab",
+        "name": "Import Tab",
+        "icon": "dashboard",
+        "order": 8,
+        "disabled": true,
+        "hidden": true
+    },
+    {
+        "id": "84593f3c.0a7048",
+        "type": "ui_group",
+        "name": "Unassigned Board",
+        "tab": "b72a8d9.124d97",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6621472a.dafe7",
+        "type": "ui_group",
+        "name": "Unassigned Calibration",
+        "tab": "b72a8d9.124d97",
         "order": 2,
         "disp": true,
         "width": "6",
