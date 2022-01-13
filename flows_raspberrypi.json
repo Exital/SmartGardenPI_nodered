@@ -1,6 +1,6 @@
 [
     {
-        "id": "f7363658.eda578",
+        "id": "3f1194b6.f45d8c",
         "type": "tab",
         "label": "Board 1",
         "disabled": false,
@@ -2978,2293 +2978,6 @@
         "y": 2460,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "a12efa14.adc44",
-        "type": "ui_button",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "2520a5c9.3a695a",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "{{msg.label}}",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "{{background}}",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "true",
-        "topicType": "msg",
-        "x": 470,
-        "y": 640,
-        "wires": [
-            [
-                "b5f6d2b5.ff84",
-                "2e18e596.5308aa"
-            ]
-        ]
-    },
-    {
-        "id": "3c92a561.8d78d2",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/soil_moisture",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 270,
-        "y": 940,
-        "wires": [
-            [
-                "703bcd6c.a94f14"
-            ]
-        ]
-    },
-    {
-        "id": "703bcd6c.a94f14",
-        "type": "ui_gauge",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "2520a5c9.3a695a",
-        "order": 5,
-        "width": "0",
-        "height": "0",
-        "gtype": "gage",
-        "title": "לחות אדמה",
-        "label": "% אחוזים",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00364a",
-            "#008cb4",
-            "#53d5fd"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 540,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "36dfded.f585f22",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/photoresistor",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 280,
-        "y": 1040,
-        "wires": [
-            [
-                "dded1487.b8f708"
-            ]
-        ]
-    },
-    {
-        "id": "dded1487.b8f708",
-        "type": "ui_gauge",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "2520a5c9.3a695a",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "עוצמת אור",
-        "label": "% אחוזים",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#444444",
-            "#f5ec00",
-            "#fff995"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 540,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "aff340a4.27adb",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/irigationOK",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 240,
-        "y": 500,
-        "wires": [
-            [
-                "37b2c464.7aa86c",
-                "ae77bf21.14e6a8",
-                "aa2da0ea.f41bb"
-            ]
-        ]
-    },
-    {
-        "id": "37b2c464.7aa86c",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "end",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 500,
-        "wires": [
-            [
-                "b5f6d2b5.ff84"
-            ]
-        ]
-    },
-    {
-        "id": "b5f6d2b5.ff84",
-        "type": "mqtt out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/irigation",
-        "qos": "1",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "32d4c2cc.b888ae",
-        "x": 700,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "d187f142.faa28",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "5",
-        "highlight": "green",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "השקיה בוצעה",
-        "name": "השקיה בוצעה",
-        "x": 810,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "5e2d2d58.880fdc",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<img src=\"/imgs/irigation.jpeg\" alt=\"irigation done\" width=\"100\" height=\"100\">",
-        "output": "str",
-        "x": 640,
-        "y": 380,
-        "wires": [
-            [
-                "d187f142.faa28"
-            ]
-        ]
-    },
-    {
-        "id": "302e088e.80163",
-        "type": "ui_slider",
-        "z": "f7363658.eda578",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "group": "2520a5c9.3a695a",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "outs": "end",
-        "topic": "payload",
-        "topicType": "msg",
-        "min": "15",
-        "max": "100",
-        "step": "5",
-        "className": "",
-        "x": 410,
-        "y": 1500,
-        "wires": [
-            [
-                "745c569a.4196f"
-            ]
-        ]
-    },
-    {
-        "id": "745c569a.4196f",
-        "type": "mqtt out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/sleep",
-        "qos": "1",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "32d4c2cc.b888ae",
-        "x": 670,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "6b27d67e.6f6a7",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/sleepOK",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 230,
-        "y": 1380,
-        "wires": [
-            [
-                "2480369b.923202",
-                "ecd6a258.b988e8"
-            ]
-        ]
-    },
-    {
-        "id": "2480369b.923202",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 420,
-        "y": 1440,
-        "wires": [
-            [
-                "745c569a.4196f"
-            ]
-        ]
-    },
-    {
-        "id": "f918bb74.f26ce8",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "5",
-        "highlight": "green",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "זמן שינה עודכן",
-        "name": "זמן שינה עודכן",
-        "x": 570,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "ecd6a258.b988e8",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "הזמן עודכן ל {{payload}}",
-        "output": "str",
-        "x": 400,
-        "y": 1380,
-        "wires": [
-            [
-                "f918bb74.f26ce8"
-            ]
-        ]
-    },
-    {
-        "id": "599618f9.9dcc38",
-        "type": "ui_text",
-        "z": "f7363658.eda578",
-        "group": "2520a5c9.3a695a",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "תדירות דגימת נתונים בדקות",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 250,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "91023e24.1f3e48",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/calibration",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 240,
-        "y": 1800,
-        "wires": [
-            [
-                "9c1789a4.39e148"
-            ]
-        ]
-    },
-    {
-        "id": "9c1789a4.39e148",
-        "type": "switch",
-        "z": "f7363658.eda578",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "start",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 1800,
-        "wires": [
-            [
-                "62202725.6f52c",
-                "66e1b438.91a9c4",
-                "b83563ec.bf34f8",
-                "5afe4c76.cb2ba4"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "c7679c8a.6b8138",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "בצע כיול",
-        "cancel": "בטל",
-        "raw": false,
-        "className": "",
-        "topic": "זוהה מצב כיול",
-        "name": "זוהה מצב כיול",
-        "x": 810,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "dcca27b2.db2c58",
-        "type": "mqtt out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/calibration",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "32d4c2cc.b888ae",
-        "x": 1220,
-        "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "5186bcae.7674a4",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<p style=\"text-align: right;\">נקה את החיישן, יבש אותו ולחץ המשך",
-        "output": "str",
-        "x": 700,
-        "y": 2240,
-        "wires": [
-            [
-                "4b7f6a6c.2f94a4"
-            ]
-        ]
-    },
-    {
-        "id": "4b7f6a6c.2f94a4",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "המשך",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "כיול חיישן לחות אדמה",
-        "name": "חיישן לחות אדמה יבש",
-        "x": 870,
-        "y": 2240,
-        "wires": [
-            [
-                "571baf84.9770e8"
-            ]
-        ]
-    },
-    {
-        "id": "571baf84.9770e8",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "בקש כיול יבש",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "dry",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1090,
-        "y": 2240,
-        "wires": [
-            [
-                "3b51e4b9.84d524"
-            ]
-        ]
-    },
-    {
-        "id": "3b51e4b9.84d524",
-        "type": "mqtt out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/soil_moisture_calibration",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "32d4c2cc.b888ae",
-        "x": 1430,
-        "y": 2300,
-        "wires": []
-    },
-    {
-        "id": "a0b398b0.a23938",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/soil_moisture_calibration",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 300,
-        "y": 2360,
-        "wires": [
-            [
-                "82acadbc.271bb8"
-            ]
-        ]
-    },
-    {
-        "id": "477924bf.041a8c",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "בקש כיול רטוב",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "wet",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1090,
-        "y": 2360,
-        "wires": [
-            [
-                "3b51e4b9.84d524"
-            ]
-        ]
-    },
-    {
-        "id": "c82131df.ae412",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "הכנס את החיישן לכוס מים ולחץ המשך",
-        "output": "str",
-        "x": 700,
-        "y": 2360,
-        "wires": [
-            [
-                "22b9ab6d.7f121c"
-            ]
-        ]
-    },
-    {
-        "id": "22b9ab6d.7f121c",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "המשך",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "כיול חיישן לחות אדמה",
-        "name": "חיישן לחות אדמה רטוב",
-        "x": 880,
-        "y": 2360,
-        "wires": [
-            [
-                "477924bf.041a8c"
-            ]
-        ]
-    },
-    {
-        "id": "82acadbc.271bb8",
-        "type": "switch",
-        "z": "f7363658.eda578",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "else"
-            },
-            {
-                "t": "eq",
-                "v": "dryOK",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "wetOK",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 530,
-        "y": 2360,
-        "wires": [
-            [],
-            [
-                "c82131df.ae412"
-            ],
-            [
-                "7d5ef54b.b9bbfc",
-                "730c5a7f.ab7594"
-            ]
-        ]
-    },
-    {
-        "id": "19fe9d93.7c3fa2",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "כיול חיישן לחות אדמה בוצע בהצלחה",
-        "output": "str",
-        "x": 940,
-        "y": 2420,
-        "wires": [
-            [
-                "606701fb.6f28e8"
-            ]
-        ]
-    },
-    {
-        "id": "606701fb.6f28e8",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1110,
-        "y": 2420,
-        "wires": []
-    },
-    {
-        "id": "27abccca.999bac",
-        "type": "ui_button",
-        "z": "f7363658.eda578",
-        "name": "בצע כיולים",
-        "group": "9d7ceb4c.99af68",
-        "order": 1,
-        "width": "6",
-        "height": 1,
-        "passthru": false,
-        "label": "{{msg.label}}",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "{{background}}",
-        "className": "",
-        "icon": "",
-        "payload": "end",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 680,
-        "y": 1940,
-        "wires": [
-            [
-                "ac29d44c.a2345"
-            ]
-        ]
-    },
-    {
-        "id": "d404c039.ad8388",
-        "type": "ui_button",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "9d7ceb4c.99af68",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "כיול חיישן לחות אדמה",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "soil_moisture_calibration",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 390,
-        "y": 2240,
-        "wires": [
-            [
-                "5186bcae.7674a4",
-                "a6814b50.73c758"
-            ]
-        ]
-    },
-    {
-        "id": "f7220b11.40f2b",
-        "type": "inject",
-        "z": "f7363658.eda578",
-        "name": "",
-        "props": [
-            {
-                "p": "label",
-                "v": "השקיה",
-                "vt": "str"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 310,
-        "y": 640,
-        "wires": [
-            [
-                "a12efa14.adc44"
-            ]
-        ]
-    },
-    {
-        "id": "2e18e596.5308aa",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "פקודה נשלחה",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "red",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "פקודת השקיה נשלחה",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 720,
-        "wires": [
-            [
-                "a12efa14.adc44"
-            ]
-        ]
-    },
-    {
-        "id": "ae77bf21.14e6a8",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "פקודה בוצעה",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "green",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "הפקודה בוצעה",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 580,
-        "wires": [
-            [
-                "a12efa14.adc44",
-                "b73ffef5.5978d"
-            ]
-        ]
-    },
-    {
-        "id": "b73ffef5.5978d",
-        "type": "delay",
-        "z": "f7363658.eda578",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 650,
-        "y": 580,
-        "wires": [
-            [
-                "f7f5969f.3df198"
-            ]
-        ]
-    },
-    {
-        "id": "f7f5969f.3df198",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "החזרת כפתור למצב התחלתי",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "default",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "השקיה",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 580,
-        "wires": [
-            [
-                "a12efa14.adc44"
-            ]
-        ]
-    },
-    {
-        "id": "a6814b50.73c758",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "disable buttons",
-        "links": [
-            "9f6fd0a0.38fb88"
-        ],
-        "x": 555,
-        "y": 2180,
-        "wires": []
-    },
-    {
-        "id": "9f6fd0a0.38fb88",
-        "type": "link in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "a6814b50.73c758",
-            "2aa12071.09f2c8",
-            "61109cff.a57bec",
-            "cd5a49b3.5afe78",
-            "db5bc468.9ea398"
-        ],
-        "x": 1955,
-        "y": 2000,
-        "wires": [
-            [
-                "f9df5be4.a1739"
-            ]
-        ]
-    },
-    {
-        "id": "17e86666.95da9a",
-        "type": "link in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "c386f2f1.c840b",
-            "6455d29a.4c3bac"
-        ],
-        "x": 235,
-        "y": 2240,
-        "wires": [
-            [
-                "d404c039.ad8388"
-            ]
-        ]
-    },
-    {
-        "id": "c386f2f1.c840b",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "17e86666.95da9a",
-            "975b905b.ea6e88",
-            "af9fd8d6.5098a"
-        ],
-        "x": 2245,
-        "y": 2000,
-        "wires": []
-    },
-    {
-        "id": "f9df5be4.a1739",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "ביטול כפתורים",
-        "rules": [
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2090,
-        "y": 2000,
-        "wires": [
-            [
-                "c386f2f1.c840b"
-            ]
-        ]
-    },
-    {
-        "id": "ae8d649d.622fb8",
-        "type": "link in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "730c5a7f.ab7594",
-            "66e1b438.91a9c4",
-            "c06a9245.7bcf08"
-        ],
-        "x": 1955,
-        "y": 2080,
-        "wires": [
-            [
-                "e5954b59.49802"
-            ]
-        ]
-    },
-    {
-        "id": "6455d29a.4c3bac",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "17e86666.95da9a",
-            "975b905b.ea6e88",
-            "af9fd8d6.5098a"
-        ],
-        "x": 2245,
-        "y": 2080,
-        "wires": []
-    },
-    {
-        "id": "e5954b59.49802",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "החזרת כפתורים",
-        "rules": [
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2100,
-        "y": 2080,
-        "wires": [
-            [
-                "6455d29a.4c3bac"
-            ]
-        ]
-    },
-    {
-        "id": "730c5a7f.ab7594",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "ae8d649d.622fb8"
-        ],
-        "x": 675,
-        "y": 2460,
-        "wires": []
-    },
-    {
-        "id": "1e8f1f00.b15341",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/comOK",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 230,
-        "y": 120,
-        "wires": [
-            [
-                "f771e89.6c00d98",
-                "8b5e85e7.20a4d8"
-            ]
-        ]
-    },
-    {
-        "id": "ee2efc81.c90a2",
-        "type": "ui_led",
-        "z": "f7363658.eda578",
-        "order": 1,
-        "group": "2520a5c9.3a695a",
-        "width": 0,
-        "height": 0,
-        "label": "תקשורת עם יחידת הקצה",
-        "labelPlacement": "right",
-        "labelAlignment": "right",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "",
-        "x": 770,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "f771e89.6c00d98",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 60,
-        "wires": [
-            [
-                "ee2efc81.c90a2"
-            ]
-        ]
-    },
-    {
-        "id": "dd66ea4d.b914f8",
-        "type": "function",
-        "z": "f7363658.eda578",
-        "name": "",
-        "func": "var timer = context.timer || null;\n\n// If existig timer then clear out old timeout\nif (timer !== null) {\n    clearTimeout(timer);\n}\n\n// set up new timeout using msg.timeout (S) as the time\nif (msg.timeout) {   // but only if msg.timeout exists\n    timer = setTimeout(function() {\n        node.send({payload:false});\n    }, msg.timeout * 1000);\n}\n// save the new timeout and return nothing.\ncontext.timer = timer;\nreturn null;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 160,
-        "wires": [
-            [
-                "ee2efc81.c90a2"
-            ]
-        ]
-    },
-    {
-        "id": "8b5e85e7.20a4d8",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "timeout",
-                "pt": "msg",
-                "to": "timeout",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 160,
-        "wires": [
-            [
-                "dd66ea4d.b914f8"
-            ]
-        ]
-    },
-    {
-        "id": "e8b31698.76d338",
-        "type": "function",
-        "z": "f7363658.eda578",
-        "name": "",
-        "func": "var time = msg.payload\ntime = time * 2\nmsg.payload = time\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 1580,
-        "wires": [
-            [
-                "238cb5cf.a068c2"
-            ]
-        ]
-    },
-    {
-        "id": "238cb5cf.a068c2",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "timeout",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 1580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "86753049.24afa8",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/sleepTime",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 250,
-        "y": 1500,
-        "wires": [
-            [
-                "302e088e.80163",
-                "e8b31698.76d338"
-            ]
-        ]
-    },
-    {
-        "id": "f0999bfc.4d5888",
-        "type": "inject",
-        "z": "f7363658.eda578",
-        "name": "אתחול",
-        "props": [
-            {
-                "p": "label",
-                "v": "בצע כיול",
-                "vt": "str"
-            },
-            {
-                "p": "background",
-                "v": "default",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 470,
-        "y": 1940,
-        "wires": [
-            [
-                "27abccca.999bac"
-            ]
-        ]
-    },
-    {
-        "id": "4e6a66db.4bf608",
-        "type": "inject",
-        "z": "f7363658.eda578",
-        "name": "אתחול",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2010,
-        "y": 1920,
-        "wires": [
-            [
-                "61109cff.a57bec"
-            ]
-        ]
-    },
-    {
-        "id": "61109cff.a57bec",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "9f6fd0a0.38fb88"
-        ],
-        "x": 2135,
-        "y": 1920,
-        "wires": []
-    },
-    {
-        "id": "c0853b98.991d6",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "5",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "לחץ על כפתור הכיולים בעמדת הקצה כדי להתחיל כיול",
-        "name": "הוראות התחלת כיול",
-        "x": 1350,
-        "y": 1980,
-        "wires": []
-    },
-    {
-        "id": "158a1cc9.f6ffc3",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": " ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1140,
-        "y": 1980,
-        "wires": [
-            [
-                "c0853b98.991d6"
-            ]
-        ]
-    },
-    {
-        "id": "62202725.6f52c",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "הפוך כפתור ל״צא ממצב כיול״",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "red",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "צא ממצב כיול",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 1880,
-        "wires": [
-            [
-                "27abccca.999bac"
-            ]
-        ]
-    },
-    {
-        "id": "66e1b438.91a9c4",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "ae8d649d.622fb8"
-        ],
-        "x": 555,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "ac29d44c.a2345",
-        "type": "switch",
-        "z": "f7363658.eda578",
-        "name": "",
-        "property": "calibration",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 910,
-        "y": 1940,
-        "wires": [
-            [
-                "dcca27b2.db2c58",
-                "fec9c6ac.34bda",
-                "cd5a49b3.5afe78",
-                "b2b05b31.d18918"
-            ],
-            [
-                "158a1cc9.f6ffc3"
-            ]
-        ]
-    },
-    {
-        "id": "b83563ec.bf34f8",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "calibration",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 1740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b2b05b31.d18918",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "calibration",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1150,
-        "y": 1920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "42ba89e6.ff2",
-        "type": "inject",
-        "z": "f7363658.eda578",
-        "name": "אתחול",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1130,
-        "y": 1860,
-        "wires": [
-            [
-                "b2b05b31.d18918"
-            ]
-        ]
-    },
-    {
-        "id": "fec9c6ac.34bda",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "החזר כפתור למצב התחלתי",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "default",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "בצע כיול",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 2000,
-        "wires": [
-            [
-                "27abccca.999bac"
-            ]
-        ]
-    },
-    {
-        "id": "cd5a49b3.5afe78",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "9f6fd0a0.38fb88"
-        ],
-        "x": 1055,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "5afe4c76.cb2ba4",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": " ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 1800,
-        "wires": [
-            [
-                "c7679c8a.6b8138"
-            ]
-        ]
-    },
-    {
-        "id": "7d5ef54b.b9bbfc",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": " ",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": " ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 2420,
-        "wires": [
-            [
-                "19fe9d93.7c3fa2"
-            ]
-        ]
-    },
-    {
-        "id": "726072be.52a29c",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<p style=\"text-align: right;\">כסה את החיישן כך שיהיה בחשיכה מוחלטת, לחץ המשך</p>",
-        "output": "str",
-        "x": 640,
-        "y": 2720,
-        "wires": [
-            [
-                "fbe11ad5.40ff78"
-            ]
-        ]
-    },
-    {
-        "id": "fbe11ad5.40ff78",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "המשך",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "כיול חיישן אור",
-        "name": "כיול חשוך",
-        "x": 800,
-        "y": 2720,
-        "wires": [
-            [
-                "28217867.d45d28"
-            ]
-        ]
-    },
-    {
-        "id": "28217867.d45d28",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "בקש כיול חושך",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "dark",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 2720,
-        "wires": [
-            [
-                "9fcc750f.f1abc"
-            ]
-        ]
-    },
-    {
-        "id": "9fcc750f.f1abc",
-        "type": "mqtt out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/light_calibration",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "32d4c2cc.b888ae",
-        "x": 1340,
-        "y": 2780,
-        "wires": []
-    },
-    {
-        "id": "1664499a.22037e",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/light_calibration",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 220,
-        "y": 2840,
-        "wires": [
-            [
-                "7f923336.769e54"
-            ]
-        ]
-    },
-    {
-        "id": "ed8a2019.e8d758",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "בקש כיול מואר",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "light",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 2840,
-        "wires": [
-            [
-                "9fcc750f.f1abc"
-            ]
-        ]
-    },
-    {
-        "id": "65649730.ce3458",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "חשוף את החיישן לתאורה חזקה ולחץ המשך",
-        "output": "str",
-        "x": 640,
-        "y": 2840,
-        "wires": [
-            [
-                "7ca918cc.230518"
-            ]
-        ]
-    },
-    {
-        "id": "7ca918cc.230518",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "המשך",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "כיול חיישן אור",
-        "name": "כיול מואר",
-        "x": 820,
-        "y": 2840,
-        "wires": [
-            [
-                "ed8a2019.e8d758"
-            ]
-        ]
-    },
-    {
-        "id": "7f923336.769e54",
-        "type": "switch",
-        "z": "f7363658.eda578",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "else"
-            },
-            {
-                "t": "eq",
-                "v": "darkOK",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "lightOK",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 470,
-        "y": 2840,
-        "wires": [
-            [],
-            [
-                "65649730.ce3458"
-            ],
-            [
-                "84d6219b.a74e2",
-                "c06a9245.7bcf08"
-            ]
-        ]
-    },
-    {
-        "id": "9852990d.cad408",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "כיול חיישן אור בוצע בהצלחה",
-        "output": "str",
-        "x": 880,
-        "y": 2900,
-        "wires": [
-            [
-                "19947004.cc09e8"
-            ]
-        ]
-    },
-    {
-        "id": "19947004.cc09e8",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1050,
-        "y": 2900,
-        "wires": []
-    },
-    {
-        "id": "fb42b202.d588e8",
-        "type": "ui_button",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "9d7ceb4c.99af68",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "כיול חיישן אור",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "soil_moisture_calibration",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 310,
-        "y": 2720,
-        "wires": [
-            [
-                "726072be.52a29c",
-                "db5bc468.9ea398"
-            ]
-        ]
-    },
-    {
-        "id": "db5bc468.9ea398",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "disable buttons",
-        "links": [
-            "9f6fd0a0.38fb88"
-        ],
-        "x": 495,
-        "y": 2660,
-        "wires": []
-    },
-    {
-        "id": "af9fd8d6.5098a",
-        "type": "link in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "c386f2f1.c840b",
-            "6455d29a.4c3bac"
-        ],
-        "x": 175,
-        "y": 2720,
-        "wires": [
-            [
-                "fb42b202.d588e8"
-            ]
-        ]
-    },
-    {
-        "id": "c06a9245.7bcf08",
-        "type": "link out",
-        "z": "f7363658.eda578",
-        "name": "",
-        "links": [
-            "ae8d649d.622fb8"
-        ],
-        "x": 615,
-        "y": 2940,
-        "wires": []
-    },
-    {
-        "id": "84d6219b.a74e2",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": " ",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": " ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 680,
-        "y": 2900,
-        "wires": [
-            [
-                "9852990d.cad408"
-            ]
-        ]
-    },
-    {
-        "id": "e699cd2d.1d5008",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/battery_percentage",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 290,
-        "y": 820,
-        "wires": [
-            [
-                "bb74f903.df09b8"
-            ]
-        ]
-    },
-    {
-        "id": "bb74f903.df09b8",
-        "type": "ui_gauge",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "2520a5c9.3a695a",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "סוללה",
-        "label": "% אחוזים",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#e32400",
-            "#e6e600",
-            "#77bb41"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 510,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "5323b58c.873c14",
-        "type": "ui_gauge",
-        "z": "f7363658.eda578",
-        "name": "",
-        "group": "2520a5c9.3a695a",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "טמפרטורה",
-        "label": "C מעלות",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "80",
-        "colors": [
-            "#00a3d7",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 500,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "1807f602.d4b88a",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/temprature",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 260,
-        "y": 1140,
-        "wires": [
-            [
-                "5323b58c.873c14"
-            ]
-        ]
-    },
-    {
-        "id": "8ee4119e.32697",
-        "type": "mqtt in",
-        "z": "f7363658.eda578",
-        "name": "",
-        "topic": "board/1/water_level",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "32d4c2cc.b888ae",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 240,
-        "y": 280,
-        "wires": [
-            [
-                "ca918ea5.bde048"
-            ]
-        ]
-    },
-    {
-        "id": "95fbf0e7.cb17c",
-        "type": "ui_led",
-        "z": "f7363658.eda578",
-        "order": 2,
-        "group": "2520a5c9.3a695a",
-        "width": 0,
-        "height": 0,
-        "label": "מים במיכל השקיה",
-        "labelPlacement": "right",
-        "labelAlignment": "right",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "",
-        "x": 670,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "ca918ea5.bde048",
-        "type": "change",
-        "z": "f7363658.eda578",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "low",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "high",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 280,
-        "wires": [
-            [
-                "95fbf0e7.cb17c"
-            ]
-        ]
-    },
-    {
-        "id": "aa2da0ea.f41bb",
-        "type": "switch",
-        "z": "f7363658.eda578",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "true",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 440,
-        "y": 420,
-        "wires": [
-            [
-                "5e2d2d58.880fdc"
-            ],
-            [
-                "1912e456.b6b7ac"
-            ]
-        ]
-    },
-    {
-        "id": "67c34bf0.76765c",
-        "type": "ui_toast",
-        "z": "f7363658.eda578",
-        "position": "top right",
-        "displayTime": "5",
-        "highlight": "red",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": true,
-        "className": "",
-        "topic": "השקיה לא בוצעה",
-        "name": "השקיה לא בוצעה",
-        "x": 820,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "1912e456.b6b7ac",
-        "type": "template",
-        "z": "f7363658.eda578",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "השקיה לא בוצעה עקב חוסר מים במיכל ההשקיה, אנא מלא מים במיכל",
-        "output": "str",
-        "x": 640,
-        "y": 460,
-        "wires": [
-            [
-                "67c34bf0.76765c"
-            ]
         ]
     },
     {
@@ -16700,6 +14413,2357 @@
             [
                 "f64dc5e8.4f08b8"
             ]
+        ]
+    },
+    {
+        "id": "d2dfce11.ba62e",
+        "type": "ui_button",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "2520a5c9.3a695a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{background}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "true",
+        "topicType": "msg",
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "a29c188c.41f418",
+                "781636a0.a37868"
+            ]
+        ]
+    },
+    {
+        "id": "d04cde7b.35973",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/soil_moisture",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 270,
+        "y": 940,
+        "wires": [
+            [
+                "2790dc4a.e009d4"
+            ]
+        ]
+    },
+    {
+        "id": "2790dc4a.e009d4",
+        "type": "ui_gauge",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "2520a5c9.3a695a",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "לחות אדמה",
+        "label": "% אחוזים",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00364a",
+            "#008cb4",
+            "#53d5fd"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 540,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "aa4268bb.91e068",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/photoresistor",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 280,
+        "y": 1040,
+        "wires": [
+            [
+                "5d366fa2.6c04b"
+            ]
+        ]
+    },
+    {
+        "id": "5d366fa2.6c04b",
+        "type": "ui_gauge",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "2520a5c9.3a695a",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "עוצמת אור",
+        "label": "% אחוזים",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#444444",
+            "#f5ec00",
+            "#fff995"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 540,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d90e505d.1b4b8",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/irigationOK",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "3e607375.71bccc",
+                "b45ea434.121bf8",
+                "11cbabde.f560d4"
+            ]
+        ]
+    },
+    {
+        "id": "3e607375.71bccc",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "end",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "a29c188c.41f418"
+            ]
+        ]
+    },
+    {
+        "id": "a29c188c.41f418",
+        "type": "mqtt out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/irigation",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "32d4c2cc.b888ae",
+        "x": 700,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a0e94a78.89f658",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "השקיה בוצעה",
+        "name": "השקיה בוצעה",
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9b892534.5d6478",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img src=\"/imgs/irigation.jpeg\" alt=\"irigation done\" width=\"100\" height=\"100\">",
+        "output": "str",
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "a0e94a78.89f658"
+            ]
+        ]
+    },
+    {
+        "id": "264eb83b.374708",
+        "type": "ui_slider",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "2520a5c9.3a695a",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "payload",
+        "topicType": "msg",
+        "min": "15",
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 410,
+        "y": 1500,
+        "wires": [
+            [
+                "af959024.f511f"
+            ]
+        ]
+    },
+    {
+        "id": "af959024.f511f",
+        "type": "mqtt out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/sleep",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "32d4c2cc.b888ae",
+        "x": 670,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "6290f1d7.34a92",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/sleepOK",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 230,
+        "y": 1380,
+        "wires": [
+            [
+                "2438d9f.8ad2526",
+                "71755207.33940c"
+            ]
+        ]
+    },
+    {
+        "id": "2438d9f.8ad2526",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 1440,
+        "wires": [
+            [
+                "af959024.f511f"
+            ]
+        ]
+    },
+    {
+        "id": "70646221.fdf79c",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "זמן שינה עודכן",
+        "name": "זמן שינה עודכן",
+        "x": 570,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "71755207.33940c",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "הזמן עודכן ל {{payload}}",
+        "output": "str",
+        "x": 400,
+        "y": 1380,
+        "wires": [
+            [
+                "70646221.fdf79c"
+            ]
+        ]
+    },
+    {
+        "id": "424c1c87.780c44",
+        "type": "ui_text",
+        "z": "3f1194b6.f45d8c",
+        "group": "2520a5c9.3a695a",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "תדירות דגימת נתונים בדקות",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 250,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "b83b3f16.4c94f",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/calibration",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 1800,
+        "wires": [
+            [
+                "fdb39c0f.8bd17"
+            ]
+        ]
+    },
+    {
+        "id": "fdb39c0f.8bd17",
+        "type": "switch",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "start",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1800,
+        "wires": [
+            [
+                "c6ef1b00.08e058",
+                "15954cea.a19573",
+                "b60ccd8c.925f3",
+                "6ea4a140.b6cbe"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6852205c.4cf15",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "בצע כיול",
+        "cancel": "בטל",
+        "raw": false,
+        "className": "",
+        "topic": "זוהה מצב כיול",
+        "name": "זוהה מצב כיול",
+        "x": 810,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "8c907e33.56809",
+        "type": "mqtt out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/calibration",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "32d4c2cc.b888ae",
+        "x": 1220,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "e4470001.26115",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<p style=\"text-align: right;\">נקה את החיישן, יבש אותו ולחץ המשך",
+        "output": "str",
+        "x": 700,
+        "y": 2240,
+        "wires": [
+            [
+                "20f11691.2bc8ca"
+            ]
+        ]
+    },
+    {
+        "id": "20f11691.2bc8ca",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "המשך",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "כיול חיישן לחות אדמה",
+        "name": "חיישן לחות אדמה יבש",
+        "x": 870,
+        "y": 2240,
+        "wires": [
+            [
+                "e935d65b.1e0f58"
+            ]
+        ]
+    },
+    {
+        "id": "e935d65b.1e0f58",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "בקש כיול יבש",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "dry",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 2240,
+        "wires": [
+            [
+                "fb65e465.471af8"
+            ]
+        ]
+    },
+    {
+        "id": "fb65e465.471af8",
+        "type": "mqtt out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/soil_moisture_calibration",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "32d4c2cc.b888ae",
+        "x": 1430,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "a7c96f6b.8adf1",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/soil_moisture_calibration",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 300,
+        "y": 2360,
+        "wires": [
+            [
+                "ed87e6c5.aa4d78"
+            ]
+        ]
+    },
+    {
+        "id": "323c40dd.ef8f1",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "בקש כיול רטוב",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "wet",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 2360,
+        "wires": [
+            [
+                "fb65e465.471af8"
+            ]
+        ]
+    },
+    {
+        "id": "ca4b0cbf.b288e",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "הכנס את החיישן לכוס מים ולחץ המשך",
+        "output": "str",
+        "x": 700,
+        "y": 2360,
+        "wires": [
+            [
+                "4507477b.9be6d8"
+            ]
+        ]
+    },
+    {
+        "id": "4507477b.9be6d8",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "המשך",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "כיול חיישן לחות אדמה",
+        "name": "חיישן לחות אדמה רטוב",
+        "x": 880,
+        "y": 2360,
+        "wires": [
+            [
+                "323c40dd.ef8f1"
+            ]
+        ]
+    },
+    {
+        "id": "ed87e6c5.aa4d78",
+        "type": "switch",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "dryOK",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "wetOK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 530,
+        "y": 2360,
+        "wires": [
+            [],
+            [
+                "ca4b0cbf.b288e"
+            ],
+            [
+                "9682974d.a8c338",
+                "2a0752ac.97ea9e"
+            ]
+        ]
+    },
+    {
+        "id": "781625a1.b58a9c",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "כיול חיישן לחות אדמה בוצע בהצלחה",
+        "output": "str",
+        "x": 940,
+        "y": 2420,
+        "wires": [
+            [
+                "30dc9b4b.694954"
+            ]
+        ]
+    },
+    {
+        "id": "30dc9b4b.694954",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1110,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "aa69ebc5.9c7898",
+        "type": "ui_button",
+        "z": "3f1194b6.f45d8c",
+        "name": "בצע כיולים",
+        "group": "9d7ceb4c.99af68",
+        "order": 1,
+        "width": "6",
+        "height": 1,
+        "passthru": false,
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{background}}",
+        "className": "",
+        "icon": "",
+        "payload": "end",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 680,
+        "y": 1940,
+        "wires": [
+            [
+                "65bd8f6e.29a3f"
+            ]
+        ]
+    },
+    {
+        "id": "fdb01cce.0c924",
+        "type": "ui_button",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "9d7ceb4c.99af68",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "כיול חיישן לחות אדמה",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "soil_moisture_calibration",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 390,
+        "y": 2240,
+        "wires": [
+            [
+                "e4470001.26115",
+                "c4855e4a.2d678"
+            ]
+        ]
+    },
+    {
+        "id": "d5abf905.0e9fb8",
+        "type": "inject",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "props": [
+            {
+                "p": "label",
+                "v": "השקיה",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "d2dfce11.ba62e"
+            ]
+        ]
+    },
+    {
+        "id": "781636a0.a37868",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "פקודה נשלחה",
+        "rules": [
+            {
+                "t": "set",
+                "p": "background",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "פקודת השקיה נשלחה",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "d2dfce11.ba62e"
+            ]
+        ]
+    },
+    {
+        "id": "b45ea434.121bf8",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "פקודה בוצעה",
+        "rules": [
+            {
+                "t": "set",
+                "p": "background",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "הפקודה בוצעה",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "d2dfce11.ba62e",
+                "96e53cb5.c4ab1"
+            ]
+        ]
+    },
+    {
+        "id": "96e53cb5.c4ab1",
+        "type": "delay",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "7698e4a8.d041bc"
+            ]
+        ]
+    },
+    {
+        "id": "7698e4a8.d041bc",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "החזרת כפתור למצב התחלתי",
+        "rules": [
+            {
+                "t": "set",
+                "p": "background",
+                "pt": "msg",
+                "to": "default",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "השקיה",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 580,
+        "wires": [
+            [
+                "d2dfce11.ba62e"
+            ]
+        ]
+    },
+    {
+        "id": "c4855e4a.2d678",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "disable buttons",
+        "links": [
+            "efaf480c.7609d8"
+        ],
+        "x": 555,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "efaf480c.7609d8",
+        "type": "link in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "c4855e4a.2d678",
+            "2aa12071.09f2c8",
+            "49adf9fd.dbcf08",
+            "5eb98cf3.611544",
+            "14c18fd5.b5118"
+        ],
+        "x": 1955,
+        "y": 2000,
+        "wires": [
+            [
+                "950c30aa.386e1"
+            ]
+        ]
+    },
+    {
+        "id": "e7642f2c.42ea8",
+        "type": "link in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "268ec25d.64b37e",
+            "337abf7f.587e7"
+        ],
+        "x": 235,
+        "y": 2240,
+        "wires": [
+            [
+                "fdb01cce.0c924"
+            ]
+        ]
+    },
+    {
+        "id": "268ec25d.64b37e",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "e7642f2c.42ea8",
+            "975b905b.ea6e88",
+            "62056f79.b9f49"
+        ],
+        "x": 2245,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "950c30aa.386e1",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "ביטול כפתורים",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2090,
+        "y": 2000,
+        "wires": [
+            [
+                "268ec25d.64b37e"
+            ]
+        ]
+    },
+    {
+        "id": "19333556.4a094b",
+        "type": "link in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "2a0752ac.97ea9e",
+            "15954cea.a19573",
+            "ca22577a.02f6f8"
+        ],
+        "x": 1955,
+        "y": 2080,
+        "wires": [
+            [
+                "4c9d2ace.5cce64"
+            ]
+        ]
+    },
+    {
+        "id": "337abf7f.587e7",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "e7642f2c.42ea8",
+            "975b905b.ea6e88",
+            "62056f79.b9f49"
+        ],
+        "x": 2245,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "4c9d2ace.5cce64",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "החזרת כפתורים",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2100,
+        "y": 2080,
+        "wires": [
+            [
+                "337abf7f.587e7"
+            ]
+        ]
+    },
+    {
+        "id": "2a0752ac.97ea9e",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "19333556.4a094b"
+        ],
+        "x": 675,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "7e7b2432.4462fc",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/comOK",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "2d757d38.711122",
+                "904f2cfd.820e7"
+            ]
+        ]
+    },
+    {
+        "id": "c8c14139.b179c",
+        "type": "ui_led",
+        "z": "3f1194b6.f45d8c",
+        "order": 1,
+        "group": "2520a5c9.3a695a",
+        "width": 0,
+        "height": 0,
+        "label": "תקשורת עם יחידת הקצה",
+        "labelPlacement": "right",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 770,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2d757d38.711122",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "c8c14139.b179c"
+            ]
+        ]
+    },
+    {
+        "id": "c3b3084c.4ada18",
+        "type": "function",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "func": "var timer = context.timer || null;\n\n// If existig timer then clear out old timeout\nif (timer !== null) {\n    clearTimeout(timer);\n}\n\n// set up new timeout using msg.timeout (S) as the time\nif (msg.timeout) {   // but only if msg.timeout exists\n    timer = setTimeout(function() {\n        node.send({payload:false});\n    }, msg.timeout * 1000);\n}\n// save the new timeout and return nothing.\ncontext.timer = timer;\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 160,
+        "wires": [
+            [
+                "c8c14139.b179c"
+            ]
+        ]
+    },
+    {
+        "id": "904f2cfd.820e7",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timeout",
+                "pt": "msg",
+                "to": "timeout",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 160,
+        "wires": [
+            [
+                "c3b3084c.4ada18"
+            ]
+        ]
+    },
+    {
+        "id": "6be3da70.d3ca54",
+        "type": "function",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "func": "var time = msg.payload\ntime = time * 2\nmsg.payload = time\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1580,
+        "wires": [
+            [
+                "295f59a6.be4666"
+            ]
+        ]
+    },
+    {
+        "id": "295f59a6.be4666",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timeout",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c7eac3e.279ec4",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/sleepTime",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 250,
+        "y": 1500,
+        "wires": [
+            [
+                "264eb83b.374708",
+                "6be3da70.d3ca54"
+            ]
+        ]
+    },
+    {
+        "id": "e6510126.fb4b7",
+        "type": "inject",
+        "z": "3f1194b6.f45d8c",
+        "name": "אתחול",
+        "props": [
+            {
+                "p": "label",
+                "v": "בצע כיול",
+                "vt": "str"
+            },
+            {
+                "p": "background",
+                "v": "default",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 470,
+        "y": 1940,
+        "wires": [
+            [
+                "aa69ebc5.9c7898"
+            ]
+        ]
+    },
+    {
+        "id": "516e1dd7.326da4",
+        "type": "inject",
+        "z": "3f1194b6.f45d8c",
+        "name": "אתחול",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2010,
+        "y": 1920,
+        "wires": [
+            [
+                "49adf9fd.dbcf08"
+            ]
+        ]
+    },
+    {
+        "id": "49adf9fd.dbcf08",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "efaf480c.7609d8"
+        ],
+        "x": 2135,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "1ea9520d.b6cb4e",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "לחץ על כפתור הכיולים בעמדת הקצה כדי להתחיל כיול",
+        "name": "הוראות התחלת כיול",
+        "x": 1350,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "a7a1f3e1.a3453",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 1980,
+        "wires": [
+            [
+                "1ea9520d.b6cb4e"
+            ]
+        ]
+    },
+    {
+        "id": "c6ef1b00.08e058",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "הפוך כפתור ל״צא ממצב כיול״",
+        "rules": [
+            {
+                "t": "set",
+                "p": "background",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "צא ממצב כיול",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1880,
+        "wires": [
+            [
+                "aa69ebc5.9c7898"
+            ]
+        ]
+    },
+    {
+        "id": "15954cea.a19573",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "19333556.4a094b"
+        ],
+        "x": 555,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "65bd8f6e.29a3f",
+        "type": "switch",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "property": "calibration",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 910,
+        "y": 1940,
+        "wires": [
+            [
+                "8c907e33.56809",
+                "900ff2bf.e44de",
+                "5eb98cf3.611544",
+                "785c3158.61d85"
+            ],
+            [
+                "a7a1f3e1.a3453"
+            ]
+        ]
+    },
+    {
+        "id": "b60ccd8c.925f3",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "calibration",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "785c3158.61d85",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "calibration",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7e98af3.ba38a8",
+        "type": "inject",
+        "z": "3f1194b6.f45d8c",
+        "name": "אתחול",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1130,
+        "y": 1860,
+        "wires": [
+            [
+                "785c3158.61d85"
+            ]
+        ]
+    },
+    {
+        "id": "900ff2bf.e44de",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "החזר כפתור למצב התחלתי",
+        "rules": [
+            {
+                "t": "set",
+                "p": "background",
+                "pt": "msg",
+                "to": "default",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "בצע כיול",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 2000,
+        "wires": [
+            [
+                "aa69ebc5.9c7898"
+            ]
+        ]
+    },
+    {
+        "id": "5eb98cf3.611544",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "efaf480c.7609d8"
+        ],
+        "x": 1055,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "6ea4a140.b6cbe",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 1800,
+        "wires": [
+            [
+                "6852205c.4cf15"
+            ]
+        ]
+    },
+    {
+        "id": "9682974d.a8c338",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 2420,
+        "wires": [
+            [
+                "781625a1.b58a9c"
+            ]
+        ]
+    },
+    {
+        "id": "b726cc9e.49e67",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<p style=\"text-align: right;\">כסה את החיישן כך שיהיה בחשיכה מוחלטת, לחץ המשך</p>",
+        "output": "str",
+        "x": 640,
+        "y": 2720,
+        "wires": [
+            [
+                "c3e4bdc4.be091"
+            ]
+        ]
+    },
+    {
+        "id": "c3e4bdc4.be091",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "המשך",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "כיול חיישן אור",
+        "name": "כיול חשוך",
+        "x": 800,
+        "y": 2720,
+        "wires": [
+            [
+                "604bae29.b37e9"
+            ]
+        ]
+    },
+    {
+        "id": "604bae29.b37e9",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "בקש כיול חושך",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "dark",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 2720,
+        "wires": [
+            [
+                "f11b2ca5.77c1d"
+            ]
+        ]
+    },
+    {
+        "id": "f11b2ca5.77c1d",
+        "type": "mqtt out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/light_calibration",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "32d4c2cc.b888ae",
+        "x": 1340,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "8eb36240.389ce",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/light_calibration",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 220,
+        "y": 2840,
+        "wires": [
+            [
+                "54db124b.4af91c"
+            ]
+        ]
+    },
+    {
+        "id": "1ddec0c5.cf848f",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "בקש כיול מואר",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "light",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 2840,
+        "wires": [
+            [
+                "f11b2ca5.77c1d"
+            ]
+        ]
+    },
+    {
+        "id": "a8577876.cccef8",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "חשוף את החיישן לתאורה חזקה ולחץ המשך",
+        "output": "str",
+        "x": 640,
+        "y": 2840,
+        "wires": [
+            [
+                "d9c3b8d8.baf148"
+            ]
+        ]
+    },
+    {
+        "id": "d9c3b8d8.baf148",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "המשך",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "כיול חיישן אור",
+        "name": "כיול מואר",
+        "x": 820,
+        "y": 2840,
+        "wires": [
+            [
+                "1ddec0c5.cf848f"
+            ]
+        ]
+    },
+    {
+        "id": "54db124b.4af91c",
+        "type": "switch",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "darkOK",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "lightOK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 470,
+        "y": 2840,
+        "wires": [
+            [],
+            [
+                "a8577876.cccef8"
+            ],
+            [
+                "26e7df1e.5a7e9",
+                "ca22577a.02f6f8"
+            ]
+        ]
+    },
+    {
+        "id": "8b2dbc0c.df724",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "כיול חיישן אור בוצע בהצלחה",
+        "output": "str",
+        "x": 880,
+        "y": 2900,
+        "wires": [
+            [
+                "34ec6bd7.006824"
+            ]
+        ]
+    },
+    {
+        "id": "34ec6bd7.006824",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1050,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "ca4972eb.47ac4",
+        "type": "ui_button",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "9d7ceb4c.99af68",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "כיול חיישן אור",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "soil_moisture_calibration",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 2720,
+        "wires": [
+            [
+                "b726cc9e.49e67",
+                "14c18fd5.b5118"
+            ]
+        ]
+    },
+    {
+        "id": "14c18fd5.b5118",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "disable buttons",
+        "links": [
+            "efaf480c.7609d8"
+        ],
+        "x": 495,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "62056f79.b9f49",
+        "type": "link in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "268ec25d.64b37e",
+            "337abf7f.587e7"
+        ],
+        "x": 175,
+        "y": 2720,
+        "wires": [
+            [
+                "ca4972eb.47ac4"
+            ]
+        ]
+    },
+    {
+        "id": "ca22577a.02f6f8",
+        "type": "link out",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "links": [
+            "19333556.4a094b"
+        ],
+        "x": 615,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "26e7df1e.5a7e9",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 2900,
+        "wires": [
+            [
+                "8b2dbc0c.df724"
+            ]
+        ]
+    },
+    {
+        "id": "328439bd.510b26",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/battery_percentage",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 290,
+        "y": 820,
+        "wires": [
+            [
+                "cc43832.42e518"
+            ]
+        ]
+    },
+    {
+        "id": "cc43832.42e518",
+        "type": "ui_gauge",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "2520a5c9.3a695a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "סוללה",
+        "label": "% אחוזים",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#e32400",
+            "#e6e600",
+            "#77bb41"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 510,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "bb2ba10b.1c53a",
+        "type": "ui_gauge",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "group": "2520a5c9.3a695a",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "טמפרטורה",
+        "label": "C מעלות",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "80",
+        "colors": [
+            "#00a3d7",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 500,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "4ed6567.00619a8",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/temprature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 260,
+        "y": 1140,
+        "wires": [
+            [
+                "bb2ba10b.1c53a"
+            ]
+        ]
+    },
+    {
+        "id": "ea28ccab.f2857",
+        "type": "mqtt in",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "topic": "board/1/water_level",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32d4c2cc.b888ae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "771a102a.4a651"
+            ]
+        ]
+    },
+    {
+        "id": "89d252ce.a5466",
+        "type": "ui_led",
+        "z": "3f1194b6.f45d8c",
+        "order": 2,
+        "group": "2520a5c9.3a695a",
+        "width": 0,
+        "height": 0,
+        "label": "מים במיכל השקיה",
+        "labelPlacement": "right",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "771a102a.4a651",
+        "type": "change",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "low",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "high",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "89d252ce.a5466"
+            ]
+        ]
+    },
+    {
+        "id": "11cbabde.f560d4",
+        "type": "switch",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "9b892534.5d6478"
+            ],
+            [
+                "ed764fdb.87b6c"
+            ]
+        ]
+    },
+    {
+        "id": "110772f0.9ced6d",
+        "type": "ui_toast",
+        "z": "3f1194b6.f45d8c",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "השקיה לא בוצעה",
+        "name": "השקיה לא בוצעה",
+        "x": 820,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ed764fdb.87b6c",
+        "type": "template",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "השקיה לא בוצעה עקב חוסר מים במיכל ההשקיה, אנא מלא מים במיכל",
+        "output": "str",
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "110772f0.9ced6d"
+            ]
+        ]
+    },
+    {
+        "id": "6df1949.7ca096c",
+        "type": "inject",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"group\":{\"show\":[\"Board_1_Calibration\"]}}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 3000,
+        "wires": [
+            [
+                "1bc240d1.ac757f"
+            ]
+        ]
+    },
+    {
+        "id": "75797bb4.c69674",
+        "type": "switch",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 3020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bc240d1.ac757f",
+        "type": "ui_ui_control",
+        "z": "3f1194b6.f45d8c",
+        "name": "",
+        "events": "all",
+        "x": 530,
+        "y": 3120,
+        "wires": [
+            []
         ]
     }
 ]
